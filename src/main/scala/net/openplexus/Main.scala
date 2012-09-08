@@ -7,10 +7,9 @@ import com.badlogic.gdx.backends.lwjgl.{LwjglApplication, LwjglApplicationConfig
  */
 object Main extends App{
   val config = new LwjglApplicationConfiguration()
-  config.useGL20 = false
   config.width = 800
   config.height = 600
   config.title  = "ANTale"
-  new LwjglApplication(new Game(), config)
+  new LwjglApplication(new Game(config.width, config.height), config)
 
 }
