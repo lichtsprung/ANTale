@@ -6,6 +6,8 @@ name := "ANTale"
 
 organization := "net.openplexus"
 
+fork in run := true
+
 libraryDependencies += "org.scalatest" %% "scalatest" % "1.7.2" % "test"
 
 
