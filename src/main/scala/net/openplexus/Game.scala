@@ -13,13 +13,12 @@ class Game(width: Int, height: Int) extends ApplicationListener {
   val camera = new OrthographicCamera()
   var batch: SpriteBatch = null
   var map: Map = null
-  var sprites: TextureAtlas = null
+
 
   def create() {
     camera.setToOrtho(false, width, height)
     batch = new SpriteBatch()
-    sprites = new TextureAtlas(Gdx.files.internal("sprites.png"))
-    map = Map(batch, sprites)
+    map = Map(batch)
   }
 
   def resize(width: Int, height: Int) {}
@@ -42,14 +41,12 @@ class Game(width: Int, height: Int) extends ApplicationListener {
   def dispose() {}
 }
 
-case class Map(batch: SpriteBatch, sprites: TextureAtlas) {
-  var grass = sprites.createSprite("grass")
-  val grassTile = new Rectangle(0, 0, 64, 64)
+case class Map(batch: SpriteBatch) {
 
   def render(x: Int, y: Int, width: Int, height: Int) {
     for (xx <- x.to(width, 64)) {
       for (yy <- y.to(height, 64)) {
-        batch.draw(grass, xx, yy)
+        batch.draw(Assets.GROUND_GRASS1, xx, yy)
       }
     }
   }
