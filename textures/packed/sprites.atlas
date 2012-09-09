@@ -297,9 +297,23 @@ river
   orig: 64, 64
   offset: 0, 0
   index: 9
-sword
+sand
   rotate: false
   xy: 3733, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+water
+  rotate: false
+  xy: 3799, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+sword
+  rotate: false
+  xy: 3865, 1
   size: 59, 64
   orig: 59, 64
   offset: 0, 0
