@@ -10,6 +10,8 @@ import com.badlogic.gdx.tools.imagepacker.TexturePacker2
 object Main extends App {
 
   val settings = new Settings()
+  settings.maxHeight = 4096
+  settings.maxWidth = 4096
   TexturePacker2.process(settings, "textures/unpacked", "textures/packed", "sprites")
 
   val config = new LwjglApplicationConfiguration()

@@ -2,8 +2,7 @@ package net.openplexus
 
 import com.badlogic.gdx.{Gdx, ApplicationListener}
 import com.badlogic.gdx.graphics.{GL10, OrthographicCamera}
-import com.badlogic.gdx.math.Rectangle
-import com.badlogic.gdx.graphics.g2d.{TextureAtlas, SpriteBatch}
+import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
 /**
  * The game loop
@@ -38,7 +37,10 @@ class Game(width: Int, height: Int) extends ApplicationListener {
 
   def resume() {}
 
-  def dispose() {}
+  def dispose() {
+    batch.dispose()
+    Assets.dispose()
+  }
 }
 
 case class Map(batch: SpriteBatch) {
@@ -46,7 +48,7 @@ case class Map(batch: SpriteBatch) {
   def render(x: Int, y: Int, width: Int, height: Int) {
     for (xx <- x.to(width, 64)) {
       for (yy <- y.to(height, 64)) {
-        batch.draw(Assets.GROUND_GRASS1, xx, yy)
+        batch.draw(Assets.getImage("grass2"), xx, yy)
       }
     }
   }

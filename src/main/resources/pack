@@ -3,10 +3,304 @@ sprites.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-grass
+statusbar
   rotate: false
   xy: 1, 1
+  size: 1024, 64
+  orig: 1024, 64
+  offset: 0, 0
+  index: -1
+armor
+  rotate: false
+  xy: 1027, 1
   size: 64, 64
   orig: 64, 64
+  offset: 0, 0
+  index: 1
+blood
+  rotate: false
+  xy: 1093, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+bottle_blue
+  rotate: false
+  xy: 1159, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+bottle_empty
+  rotate: false
+  xy: 1225, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+bottle_red
+  rotate: false
+  xy: 1291, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+bridge
+  rotate: false
+  xy: 1357, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+bridge
+  rotate: false
+  xy: 1423, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+bubble_l
+  rotate: false
+  xy: 1489, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+bubble_r
+  rotate: false
+  xy: 1555, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+forrest
+  rotate: false
+  xy: 1621, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+gold
+  rotate: false
+  xy: 1687, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+grass
+  rotate: false
+  xy: 1753, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+grass2
+  rotate: false
+  xy: 1819, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_dead_l
+  rotate: false
+  xy: 1885, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_dead_r
+  rotate: false
+  xy: 1951, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_l
+  rotate: false
+  xy: 2017, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_r
+  rotate: false
+  xy: 2083, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s0
+  rotate: false
+  xy: 2149, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s1
+  rotate: false
+  xy: 2215, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s2
+  rotate: false
+  xy: 2281, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s3
+  rotate: false
+  xy: 2347, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s4
+  rotate: false
+  xy: 2413, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s5
+  rotate: false
+  xy: 2479, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s6
+  rotate: false
+  xy: 2545, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s7
+  rotate: false
+  xy: 2611, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s8
+  rotate: false
+  xy: 2677, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hero_s9
+  rotate: false
+  xy: 2743, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+monster
+  rotate: false
+  xy: 2809, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+monster_dead
+  rotate: false
+  xy: 2875, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+monster_s1
+  rotate: false
+  xy: 2941, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+monster_s5
+  rotate: false
+  xy: 3007, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+river
+  rotate: false
+  xy: 3073, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+river
+  rotate: false
+  xy: 3139, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 10
+river
+  rotate: false
+  xy: 3205, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+river
+  rotate: false
+  xy: 3271, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+river
+  rotate: false
+  xy: 3337, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+river
+  rotate: false
+  xy: 3403, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+river
+  rotate: false
+  xy: 3469, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+river
+  rotate: false
+  xy: 3535, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+river
+  rotate: false
+  xy: 3601, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+river
+  rotate: false
+  xy: 3667, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+sword
+  rotate: false
+  xy: 3733, 1
+  size: 59, 64
+  orig: 59, 64
   offset: 0, 0
   index: -1
