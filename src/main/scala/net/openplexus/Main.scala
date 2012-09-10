@@ -16,6 +16,6 @@ object Main extends App {
   config.width = 800
   config.height = 600
   config.title = "ANTale"
-  new LwjglApplication(Game(config.width, config.height, 16), config)
+  new LwjglApplication(Game(config.width, config.height, 32), config)
 
 }

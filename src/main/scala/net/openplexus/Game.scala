@@ -22,7 +22,7 @@ case class Game(var width: Int, var height: Int, fontSize: Float) extends Applic
     camera.setToOrtho(false, width, height)
     batch = new SpriteBatch()
     renderer = new ShapeRenderer()
-    map = Map(batch, renderer, fontSize)
+    map = Map(batch, renderer, fontSize, width, height)
   }
 
   def resize(width: Int, height: Int) {
@@ -55,7 +55,7 @@ case class Game(var width: Int, var height: Int, fontSize: Float) extends Applic
   }
 }
 
-case class Map(batch: SpriteBatch, renderer: ShapeRenderer, fontSize: Float) {
+case class Map(batch: SpriteBatch, renderer: ShapeRenderer, fontSize: Float, width: Int, height: Int) {
   val fields = mutable.Buffer[Field]()
   var offsetX = 0
   var offsetY = 0
@@ -63,12 +63,12 @@ case class Map(batch: SpriteBatch, renderer: ShapeRenderer, fontSize: Float) {
   init()
 
   def init() {
-    for (x <- 0.to(800)) {
-      for (y <- 0.to(600)) {
+    for (x <- 0.to(width / fontSize.toInt)) {
+      for (y <- 0.to(height / fontSize.toInt)) {
         fields += Field(x, y, this)
       }
     }
-    fields(0).entities += Player("Bobo")
+    fields(35).entities += Player("Bobo", fields(35))
   }
 
   def render() {
@@ -81,24 +81,28 @@ case class Map(batch: SpriteBatch, renderer: ShapeRenderer, fontSize: Float) {
 
 
 case class Field(x: Float, y: Float, map: Map) {
-  var baseColor: Color = Color.PINK
+  var baseColor: Color = Color.DARK_GRAY
   val entities = mutable.Buffer[Entity]()
 
 
   def draw() {
     map.renderer.setColor(baseColor)
-    map.renderer.filledRect(x, y, map.fontSize, map.fontSize)
-    // TODO Draw entities
+    map.renderer.filledRect(x * map.fontSize, y * map.fontSize, map.fontSize, map.fontSize)
+    entities.foreach(entity => entity.draw(x * map.fontSize, y * map.fontSize, map.batch))
   }
 }
 
-case class Player(override val name: String) extends Entity(name){
-  def draw(x: Float, y: Float, batch: SpriteBatch){
+
+case class Player(override val name: String, override var position: Field) extends Entity(name, position) {
+  def draw(x: Float, y: Float, batch: SpriteBatch) {
+    batch.setColor(Color.WHITE)
     Assets.drawString("@", x, y, batch)
   }
 }
 
-abstract case class Entity(name: String)
+abstract case class Entity(name: String, var position: Field) {
+  def draw(x: Float, y: Float, batch: SpriteBatch)
+}
 
 
 
